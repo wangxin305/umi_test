@@ -14,6 +14,7 @@ export default function HomePage() {
           }
         })
       }}>设置</Button>
+      <p>手动设置InitialState是没问题的，但是在app.tsx中设置，就会出现不更新的情况</p>
     </div>
   );
 }

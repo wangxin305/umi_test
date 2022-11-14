@@ -13,16 +13,24 @@ export default defineApp({
     // console.log(initData)
     const {setInitialState} = initData;
     return {
+      onPageChange: async () => {
+        await setInitialState((init) => {
+          return {
+            ...init,
+            auth: true
+          }
+        })
+      },
       menu: {
-        request:async () => {
+        request: async () => {
           return [
             {
-              title: '首页',
+              name: '首页',
               path: '/',
               component: '@/pages/index'
             },
             {
-              title: '权限',
+              name: '权限',
               path: '/permissions',
               component: '@/pages/permissions',
             }
