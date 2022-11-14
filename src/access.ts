@@ -1,5 +1,5 @@
 export default function (initialState) {
-  console.log(initialState)
+  console.log(initialState.auth)
   const {auth} = initialState
   return {
     auth() {
